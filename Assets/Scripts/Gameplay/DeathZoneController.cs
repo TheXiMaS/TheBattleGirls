@@ -10,7 +10,7 @@ public class DeathZoneController : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.gameObject.GetComponent<Health>().SetDeath();
+            collision.gameObject.GetComponent<HealthAi>().SetDeath();
         }
         else
         {

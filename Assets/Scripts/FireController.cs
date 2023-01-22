@@ -55,7 +55,7 @@ public class FireController : MonoBehaviour
         for (int i = 0; i < _burnTime; i++)
         {
             yield return new WaitForSeconds(.25f);
-            _target.GetComponent<Health>().GetDamage(burningDamage);
+            _target.GetComponent<HealthAi>().TakeDamage(burningDamage);
         }
         _isBurning = false;
         yield return null;
@@ -63,7 +63,7 @@ public class FireController : MonoBehaviour
 
     private IEnumerator TouchDamage()
     {
-        _target.GetComponent<Health>().GetDamage(touchDamage);
+        _target.GetComponent<HealthAi>().TakeDamage(touchDamage);
         yield return new WaitForSeconds(1);
         _inFire = false;
         yield return null;

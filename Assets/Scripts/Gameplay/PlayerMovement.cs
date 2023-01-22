@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float _moveHorizontal;
 
-    private KeyCode _ragdollKey = KeyCode.Q;
-    private KeyCode _strafeKey = KeyCode.LeftShift;
+   // private KeyCode _ragdollKey = KeyCode.Q;
+   // private KeyCode _strafeKey = KeyCode.LeftShift;
 
     private Rigidbody2D _rb;
     [SerializeField] private Transform feetPos;
@@ -29,10 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _moveHorizontal = Input.GetAxis("Horizontal");
-
-        if (Input.GetKeyDown(_ragdollKey)) Ragdoll();
         
-        if (_isRagdolled == false) Flip(IsStrafing());
+        if (_isRagdolled == false) Flip();
 
         if (_isRagdolled == false) JumpLogic();
     }
@@ -73,19 +71,19 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(feetPos.position, 0.2f, groundLayer);
     }
 
-    private void Flip(bool isStrafing)
+    private void Flip()
     {
         if (_isFacingRight == true && _moveHorizontal < 0f || _isFacingRight == false && _moveHorizontal > 0f)
         {
             _isFacingRight = !_isFacingRight;
-            if (isStrafing == false) transform.Rotate(0, 180f, 0);
+            transform.Rotate(0, 180f, 0);
         }
     }
 
-    private bool IsStrafing()
-    {
-        return Input.GetKey(_strafeKey);
-    }
+    //private bool IsStrafing()
+    //{
+    //    return Input.GetKey(_strafeKey);
+    //}
 
     private void Ragdoll()
     {

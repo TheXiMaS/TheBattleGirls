@@ -10,7 +10,7 @@ public class TrapController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Health>().GetDamage(damage);
+            collision.gameObject.GetComponent<HealthAi>().TakeDamage(damage);
         }
     }
 }
