@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
   - Weapon
   - Bullet
+  - Item
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Player
-  - 
+  - DroppedItem
+  - Bullet
   - 
   - 
   - 
@@ -44,36 +45,60 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Back Wall
-    uniqueID: 1768707833
+  - name: ParallaxBackground
+    uniqueID: 1880541933
     locked: 0
-  - name: Parallax
-    uniqueID: 122029173
+  - name: Background
+    uniqueID: 3079170327
     locked: 0
-  - name: Struct
-    uniqueID: 2025191283
+  - name: StructWall
+    uniqueID: 637968867
     locked: 0
-  - name: Item
-    uniqueID: 1625834257
+  - name: Decorative
+    uniqueID: 1421902399
     locked: 0
-  - name: Liquid
-    uniqueID: 550661169
+  - name: Furniture
+    uniqueID: 3959786827
+    locked: 0
+  - name: Trap
+    uniqueID: 1992115433
+    locked: 0
+  - name: InteractiveObjects
+    uniqueID: 4259912437
+    locked: 0
+  - name: DroppedItem
+    uniqueID: 1569575847
+    locked: 0
+  - name: IgnorableObject
+    uniqueID: 1299523387
+    locked: 0
+  - name: NonIgnorableObject
+    uniqueID: 788440841
     locked: 0
   - name: Player
-    uniqueID: 2167015867
+    uniqueID: 1298188427
     locked: 0
-  - name: Weapon
-    uniqueID: 514495243
+  - name: ItemInHand
+    uniqueID: 1233642885
     locked: 0
-  - name: Forward Wall
-    uniqueID: 2939857995
+  - name: Water
+    uniqueID: 1239569127
     locked: 0
-  - name: Smoke
-    uniqueID: 610647687
+  - name: Structure
+    uniqueID: 3895553527
+    locked: 0
+  - name: Fog
+    uniqueID: 566480859
     locked: 0
   - name: Fire
-    uniqueID: 2104986943
+    uniqueID: 1671892973
     locked: 0
-  - name: Explosive
-    uniqueID: 3412350455
+  - name: Rain
+    uniqueID: 3444830029
+    locked: 0
+  - name: Smoke
+    uniqueID: 3709658013
+    locked: 0
+  - name: ParallaxForeground
+    uniqueID: 2258588671
     locked: 0
